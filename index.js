@@ -10,3 +10,5 @@ mongoose.connection.on('error', () => {
 app.listen(config.port, () => {
   console.log(`Server start port ${config.port}`);
 })
+
+export default app
