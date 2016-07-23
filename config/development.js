@@ -1,5 +1,5 @@
 export default {
   env: 'development',
-  db: 'mongodb://localhost/book-store',
-  port: 3001
+  db: 'mongodb://localhost/book-store-api',
+  port: 3000
 };
