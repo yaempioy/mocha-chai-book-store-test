@@ -15,13 +15,14 @@ const BookSchema = new mongoose.Schema(
 );
 
 // Sets the createdAt parameter equal to the current time
-BookSchema.pre('save', next => {
-  now = new Date();
-  if(!this.createdAt) {
-    this.createdAt = now;
-  }
-  next();
-});
+// BookSchema.pre('save', next => {
+//   let now = new Date();
+//   console.log(this.title);
+//   if(!this.createdAt) {
+//     this.createdAt = now;
+//   }
+//   next();
+// });
 
 //Exports the BookSchema for use elsewhere.
 export default mongoose.model('book', BookSchema);
