@@ -1,6 +1,10 @@
+import Promise from 'bluebird'
 import app from './server'
 import config from './config'
 import mongoose from 'mongoose'
+
+// make all method of model object (save ...) to be promisified version
+Promise.promisifyAll(mongoose)
 
 mongoose.connect(config.db, { server: { socketOptions: { keepAlive: 1 } } })
 mongoose.connection.on('error', () => {
